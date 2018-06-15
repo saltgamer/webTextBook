@@ -10,6 +10,15 @@ const path = require('path');
 module.exports = {
     mode: 'development', // "production" | "development" | "none"
     entry: ['babel-polyfill', 'whatwg-fetch', './src/js/main.js'],
+  /*  entry: {
+        main: './src/js/main.js',
+        archive: './src/js/archive.js'
+
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist')
+    },*/
     output: {
         filename: 'webTextBook.js',
         path: path.resolve(__dirname, 'dist')
