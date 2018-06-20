@@ -1,0 +1,512 @@
+{
+    "grade": "초등학교",
+    "title": "미술3",
+    "subTitle": "3~4학년군",
+    "indexList": [
+        {
+            "first": {
+                "title": "미술과 만나요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 길을 따라가면 미술이 보여요",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "나도 디자이너가 될 수 있을까?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+
+                    {
+                        "title": "02. 반응하라! 오감",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "로봇도 감각이 있다면?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+
+
+
+
+
+
+
+                ]
+
+            }
+
+        },
+
+
+        {
+            "first": {
+                "title": "미술이 좋아요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 길을 따라가면 미술이 보여요",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "나도 디자이너가 될 수 있을까?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+
+                    {
+                        "title": "02. 반응하라! 오감",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "로봇도 감각이 있다면?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+
+
+
+
+
+
+                ]
+
+            }
+
+        },
+
+
+        {
+            "first": {
+                "title": "미술과 놀아요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 길을 따라가면 미술이 보여요",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "나도 디자이너가 될 수 있을까?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+
+                    {
+                        "title": "02. 반응하라! 오감",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "third": [
+                            {
+                                "label": "궁금해요",
+                                "title": "로봇도 감각이 있다면?",
+                                "page": "1_1_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "알아보아요",
+                                "title": "우리의 감각을 수집하라",
+                                "page": "1_2_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "표현해요",
+                                "title": "느낌 표현하기",
+                                "page": "1_3_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 1~2차시).hwp"
+                                    },
+                                    {
+                                        "category": "activity",
+                                        "type": "hwp",
+                                        "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "마무리해요",
+                                "title": "감각을 살린 미술 작품",
+                                "page": "1_4_1",
+                                "dataList": [
+                                    {
+                                        "category": "learningProcess",
+                                        "type": "hwp",
+                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+
+
+
+
+
+
+
+                ]
+
+            }
+
+        }
+
+
+    ]
+
+
+}

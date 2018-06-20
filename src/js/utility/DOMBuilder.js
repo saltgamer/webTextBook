@@ -32,4 +32,10 @@ export default class DOMBuilder {
             });
         }
     }
+
+    static createTextNode(text, target) {
+        const textNode = document.createTextNode(text);
+        target.appendChild(textNode);
+        return textNode;
+    }
 }
