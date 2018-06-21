@@ -9,11 +9,14 @@ import DOMBuilder from '../utility/DOMBuilder';
 import {loadImages, loadJSON} from '../utility';
 import {initAniDom} from '../aniDom/AniDom';
 import Loading from '../Loading';
+import Theme from "../Theme";
 
 export function mainIndexList(target) {
     loadJSON('./data/meta.json')
         .then((meta) => {
             console.log('--> meta: ', meta);
+            const theme = new Theme(meta.textBookCode);
+            console.log('--> theme: ', theme);
             initIndexList(target, meta);
         });
 
