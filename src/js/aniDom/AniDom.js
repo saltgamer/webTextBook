@@ -160,7 +160,6 @@ class AniDom {
         }
     }
 
-
     setInstanceProgress(engineTime) {
         const instance = this.instance;
         const insDuration = instance.duration;

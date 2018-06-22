@@ -7,6 +7,8 @@
 import DOMBuilder from './utility/DOMBuilder';
 import {$qs} from './utility';
 
+import '../css/Loading.css';
+
 export default class Loading {
     constructor() {
         throw new Error('--> This is static class. Creating instances is forbidden.');

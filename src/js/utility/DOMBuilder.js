@@ -3,7 +3,7 @@ export default class DOMBuilder {
         throw new Error('--> This is static class. Creating instances is forbidden.');
     }
 
-    static createElement(tagName, {attrs, text, callback, parent}) {
+    static createElement(tagName, {attrs, text, callback, parent, insertBefore}) {
         const element = document.createElement(`${tagName}`);
 
         if (attrs) {
@@ -19,7 +19,12 @@ export default class DOMBuilder {
         }
 
         if (parent instanceof HTMLElement) {
-            parent.appendChild(element);
+            if (insertBefore) {
+                parent.insertBefore(element, parent.childNodes[0]);
+            } else {
+                parent.appendChild(element);
+            }
+
         }
 
         return element;

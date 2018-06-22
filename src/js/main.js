@@ -13,14 +13,30 @@ import Loading from './Loading';
 
 
 
-async function main() {
+/*async function main() {
     Loading.show();
 
     const responsive = new Responsive({
         target: $qs('#mainContainer')
     });
-    await mainTitleAni($qs('#mainTitleAni'));
     await mainIndexList($qs('#mainIndexList'));
+    await mainTitleAni($qs('#mainTitleAni'));
+
+
+}*/
+function main() {
+    Loading.show();
+
+    const responsive = new Responsive({
+        target: $qs('#mainContainer')
+    });
+    
+    mainIndexList($qs('#mainIndexList'))
+        .then(() => {
+            mainTitleAni($qs('#mainTitleAni'));
+        });
+
+
 
 }
 
