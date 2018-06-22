@@ -229,7 +229,13 @@
                                         "category": "activity",
                                         "type": "hwp",
                                         "filePath": "./data/활동지/2 반응하라! 오감(활동지 1) - 오감으로 주변 대상 탐색하기.hwp"
+                                    },
+                                    {
+                                        "category": "confirmation",
+                                        "type": "hwp",
+                                        "filePath": "./data/확인 평가/2 반응하라! 오감(확인 평가).hwp"
                                     }
+
                                 ]
                             },
                             {
@@ -312,11 +318,6 @@
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
-                                    {
-                                        "category": "learningProcess",
-                                        "type": "hwp",
-                                        "filePath": "./data/학습 과정안/2 반응하라! 오감(지도안 3~4차시).hwp"
-                                    },
                                     {
                                         "category": "confirmation",
                                         "type": "hwp",

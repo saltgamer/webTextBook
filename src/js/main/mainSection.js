@@ -7,9 +7,12 @@
 
 import DOMBuilder from '../utility/DOMBuilder';
 import {$qs, loadJSON} from '../utility';
-import Theme from "../Theme";
+import Theme from '../Theme';
+import LayerPop from './LayerPop';
 
 let theme;
+const dataMap = new Map();
+
 
 export function mainIndexList(target) {
     return loadJSON('./data/meta.json')
@@ -106,6 +109,25 @@ function initIndexList(target, meta) {
                     parent: secondBox
                 });
 
+                const dataMapKey = 'data_' + idx + '_' + idx2;
+                secondItem.setAttribute('dataMapKey', dataMapKey);
+                dataMap.set(dataMapKey, second);
+
+                secondItem.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const dataMapKey = e.target.getAttribute('dataMapKey');
+                    LayerPop.append({
+                        parent: target.parentNode,
+                        data: dataMap.get(dataMapKey),
+                        theme: theme
+
+                    });
+
+
+                }, false);
+
+
                 if (idx2 === 0) {
                     secondItem.style.paddingTop = '7px';
                 }
@@ -121,6 +143,8 @@ function initIndexList(target, meta) {
 
 
     });
+
+    console.log('--> dataMap: ', dataMap);
 
 }
 
