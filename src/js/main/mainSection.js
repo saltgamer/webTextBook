@@ -24,7 +24,7 @@ export function mainIndexList(target) {
             initBackGround(target.parentNode);
             initIndexList(target, meta);
 
-
+            initFooter($qs('#mainFooter'))
         });
 
 
@@ -108,20 +108,25 @@ function initIndexList(target, meta) {
                 secondItem.setAttribute('dataMapKey', dataMapKey);
                 dataMap.set(dataMapKey, second);
 
+                if (second.page) secondItem.setAttribute('page', second.page);
+
                 secondItem.addEventListener('click', (e) => {
                     e.preventDefault();
 
-                    const dataMapKey = e.target.getAttribute('dataMapKey');
-                    LayerPop.append({
-                        parent: target.parentNode,
-                        data: dataMap.get(dataMapKey),
-                        theme: theme
+                    const page = e.target.getAttribute('page');
+                    if (page) {
+                        alert('ui 페이지로 이동: '+ page);
+                    } else {
+                        const dataMapKey = e.target.getAttribute('dataMapKey');
+                        LayerPop.append({
+                            parent: target.parentNode,
+                            data: dataMap.get(dataMapKey),
+                            theme: theme
 
-                    });
-
+                        });
+                    }
 
                 }, false);
-
 
                 if (idx2 === 0) {
                     secondItem.style.paddingTop = '7px';
@@ -130,12 +135,8 @@ function initIndexList(target, meta) {
                     secondItem.style.paddingBottom = '7px';
                 }
 
-
             });
         }
-
-
-
 
     });
 
@@ -157,6 +158,21 @@ function initBackGround(target) {
         insertBefore: true
     });
     mainBackGround.style.backgroundImage = 'url(./theme/' + theme.textBookCode + '/mainBg.jpg)';
+
+    const mainTHubLogo = DOMBuilder.createElement('img', {
+        attrs: {
+            class: 'mainTHubLogo',
+            src: './images/tHub_logo.png'
+        },
+        parent: target
+    });
+
+    mainTHubLogo.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open('http://thub.kumsung.co.kr', '_blank');
+
+    }, false);
+
 }
 
 function resetIndexList() {
@@ -169,5 +185,38 @@ function resetIndexList() {
         secondBoxs[i].style.maxHeight = null;
         secondBoxs[i].setAttribute('selected', false);
     }
+}
+
+function initFooter(target) {
+    const mainFooterBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'mainFooterBox'
+        },
+        text: '※ 저작권자의 사전 허가 없이 학교 수업 이외의 목적으로 사용할 경우, 저작권법에 의해 처벌 받을 수 있습니다.',
+        parent: target
+    });
+
+    const mainFooterUseGuideButton = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'mainFooterUseGuideButton'
+        },
+        text: '이용안내',
+        parent: target
+    });
+    mainFooterUseGuideButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        console.log('--> userGuide button!');
+
+    }, false);
+
+    const mainFooterGoldStarLogo = DOMBuilder.createElement('img', {
+        attrs: {
+            class: 'mainFooterGoldStarLogo',
+            src: './images/goldStar_logo.png'
+        },
+        parent: target
+    });
+
 }
 
