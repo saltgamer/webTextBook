@@ -94,7 +94,7 @@ export default class LayerPop {
 
         }
 
-        data.third.forEach((value) => {
+        data.third.forEach((value, idx) => {
             const contentTr = DOMBuilder.createElement('tr', {
                 attrs: {
                     class: 'tdBgColor_' + theme.getClass()
@@ -105,9 +105,18 @@ export default class LayerPop {
             const tdLabel = DOMBuilder.createElement('td', {
                 attrs: {
                 },
-                text: value.label,
+                // text: value.label,
                 parent: contentTr
             });
+
+            const tdLabelIcon = DOMBuilder.createElement('div', {
+                attrs: {
+                    class: 'tdLabelIcon_' + idx
+                },
+                text: value.label,
+                parent: tdLabel
+            });
+
 
             const tdTitle = DOMBuilder.createElement('td', {
                 attrs: {
@@ -131,7 +140,11 @@ export default class LayerPop {
                 parent: tdGo
             });
             goButton.setAttribute('page', value.page);
+            goButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('go ui page: ' + e.target.getAttribute('page'));
 
+            }, false);
             // console.log('---data: ', value);
 
             for (let category in data.dataCategory) {

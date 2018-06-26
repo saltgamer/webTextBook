@@ -1,0 +1,128 @@
+{
+    "textBookCode": "EL_ART1",
+    "grade": "초등학교",
+    "title": "미술3",
+    "subTitle": "3~4학년군",
+    "indexList": [
+        {
+            "first": {
+                "title": "미술과 만나요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 길을 따라가면 미술이 보여요",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "1_1_1"
+                    },
+
+                    {
+                        "title": "02. 반응하라! 오감",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "1_2_1"
+                    },
+
+                    {
+                        "title": "03. 응답하라 미술",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "1_3_1"
+                    }
+
+
+                ]
+
+            }
+
+        },
+
+
+        {
+            "first": {
+                "title": "미술이 좋아요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 길을 따라가면 미술이 보여요22",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "2_1_1"
+                    },
+
+                    {
+                        "title": "02. 반응하라! 오감활동",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "2_2_1"
+                    }
+
+
+                ]
+
+            }
+
+        },
+
+
+        {
+            "first": {
+                "title": "미술과 놀아요",
+                "enable": true,
+                "second": [
+                    {
+                        "title": "01. 미술과 즐겁게 노는방법은",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "3_1_1"
+                    },
+
+                    {
+                        "title": "02. 즐거운 미술놀이",
+                        "enable": true,
+                        "dataCategory": {
+                            "learningProcess": "학습 과정안",
+                            "activity": "활동지",
+                            "confirmation": "확인 평가"
+                        },
+                        "page": "3_2_1"
+                    }
+
+
+
+
+                ]
+
+            }
+
+        }
+
+
+    ]
+
+
+}

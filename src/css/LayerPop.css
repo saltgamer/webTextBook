@@ -86,16 +86,87 @@
 
 .goButton {
     width: 50px;
-    height: 30px;
+    height: 25px;
     color: #fff;
     cursor: pointer;
-    border-radius: 15px;
-    background-color: #646464;
+    border-radius: 20px;
+    /*background-color: #646464;*/
+    background: #686868; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#828282, #5d5d5d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#828282, #5d5d5d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#828282, #5d5d5d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#828282, #5d5d5d); /* Standard syntax */
+
+    border: 2px solid #646464;
+    line-height: 18px;
 }
 
 .dataIcon {
     width: 50px;
     cursor: pointer;
 
+}
+
+.tdLabelIcon_0 {
+    background: #ed6245; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ee7c62 , #cc4935); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ee7c62 , #cc4935); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ee7c62 , #cc4935); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ee7c62 , #cc4935); /* Standard syntax */
+
+    border: 2px solid #e44f39;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_1 {
+    background: #29bda5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#51d7bf , #25b197); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#51d7bf , #25b197); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#51d7bf , #25b197); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#51d7bf , #25b197); /* Standard syntax */
+
+    border: 2px solid #2abf9f;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_2 {
+    background: #ad57de; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c877ed , #9946cc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c877ed , #9946cc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c877ed , #9946cc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c877ed , #9946cc); /* Standard syntax */
+
+    border: 2px solid #a94bd7;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_3 {
+    background: #3990e0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#65b7ef , #3684d7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#65b7ef , #3684d7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#65b7ef , #3684d7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#65b7ef , #3684d7); /* Standard syntax */
+
+    border: 2px solid #388ee3;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
