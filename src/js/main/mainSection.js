@@ -1,12 +1,12 @@
 /***
  * file name : mainSection.js
- * description : mainSection class
+ * description : mainSection functions
  * create date : 2018-06-15
  * creator : saltgamer
  ***/
 
 import DOMBuilder from '../utility/DOMBuilder';
-import {$qs, loadJSON} from '../utility';
+import {$qs, $qsa, loadJSON} from '../utility';
 import Theme from '../Theme';
 import LayerPop from './LayerPop';
 
@@ -18,6 +18,7 @@ export function mainIndexList(target) {
     return loadJSON('./data/meta.json')
         .then((meta) => {
             console.log('--> meta: ', meta);
+            if (!meta) alert('[!] meta.json 파일을 불러오는데 실패했습니다 \n\n 다시 실행해주세요.');
             theme = new Theme(meta.textBookCode);
             console.log('--> theme: ', theme);
             initBackGround(target.parentNode);
@@ -55,19 +56,13 @@ function initIndexList(target, meta) {
 
             if (select.getAttribute('selected') === 'true') {
                 select.setAttribute('selected', false);
-                // select.style.display = 'none';
-            } else {
-                select.setAttribute('selected', true);
-                // select.style.display = 'block';
-            }
-
-            if (select.style.maxHeight) {
                 select.style.maxHeight = null;
             } else {
+                resetIndexList();
+                select.setAttribute('selected', true);
                 select.style.maxHeight = select.scrollHeight + 'px';
+
             }
-
-
 
         }, false);
 
@@ -149,7 +144,7 @@ function initIndexList(target, meta) {
 }
 
 export function mainTitleAni(target) {
-    theme.initTitleAni(target);
+    return theme.initTitleAni(target);
 
 }
 
@@ -162,5 +157,17 @@ function initBackGround(target) {
         insertBefore: true
     });
     mainBackGround.style.backgroundImage = 'url(./theme/' + theme.textBookCode + '/mainBg.jpg)';
+}
+
+function resetIndexList() {
+    const secondBoxs = $qsa('.secondBox');
+  /*  secondBoxs.forEach((value) => {
+        value.style.maxHeight = null;
+        value.setAttribute('selected', false);
+    });*/
+    for (let i = 0; i < secondBoxs.length; i++) {
+        secondBoxs[i].style.maxHeight = null;
+        secondBoxs[i].setAttribute('selected', false);
+    }
 }
 

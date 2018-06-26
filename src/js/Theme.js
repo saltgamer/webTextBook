@@ -37,7 +37,7 @@ export default class Theme {
         switch (this.textBookCode) {
             case 'EL_ART1':
 
-                Promise.all([
+                return Promise.all([
                     loadBoyImg(this.textBookCode),
                     loadMonkeyImg(this.textBookCode)
                 ])
@@ -50,7 +50,7 @@ export default class Theme {
                     });
 
 
-                break;
+                // break;
             default:
                 alert('textBookCode가 잘못되었습니다.');
                 break;

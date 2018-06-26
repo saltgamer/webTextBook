@@ -10,7 +10,7 @@ import {mainIndexList, mainTitleAni} from './main/mainSection';
 import {$qs} from './utility';
 import Responsive from './Rsponsive';
 import Loading from './Loading';
-
+import {addTeacherArchive} from './archive/archiveSection';
 
 
 /*async function main() {
@@ -27,15 +27,19 @@ import Loading from './Loading';
 function main() {
     Loading.show();
 
-    const responsive = new Responsive({
-        target: $qs('#mainContainer')
-    });
-    
     mainIndexList($qs('#mainIndexList'))
         .then(() => {
-            mainTitleAni($qs('#mainTitleAni'));
+            console.log('-- step1');
+            return mainTitleAni($qs('#mainTitleAni'));
+        })
+        .then(() => {
+            console.log('-- step2');
+            const responsive = new Responsive({
+                target: $qs('#mainContainer')
+            });
         });
 
+    addTeacherArchive($qs('#teacherArchive'));
 
 
 }

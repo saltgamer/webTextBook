@@ -158,8 +158,9 @@ export default class LayerPop {
                         dataIcon.addEventListener('click', (e) => {
                             e.preventDefault();
 
-                            window.location.href = e.target.getAttribute('filePath');
+                            // window.location.href = e.target.getAttribute('filePath');
 
+                            window.open(e.target.getAttribute('filePath'), '_blank');
                         }, false);
 
                     }
