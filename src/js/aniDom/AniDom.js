@@ -160,7 +160,6 @@ class AniDom {
         }
     }
 
-
     setInstanceProgress(engineTime) {
         const instance = this.instance;
         const insDuration = instance.duration;
@@ -283,7 +282,7 @@ export function initAniDom(params) {
             const tlDuration = tl.instance.duration;
             const insOffset = insParams.offset;
             insParams.autoPlay = false;
-            insParams.direction = tl.direction;
+            insParams.direction = tl.instance.direction;
             insParams.offset = is.und(insOffset) ? tlDuration : getRelativeValue(insOffset, tlDuration);
             tl.began = true;
             tl.completed = true;

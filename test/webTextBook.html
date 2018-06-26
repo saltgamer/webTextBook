@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <title>webTextBook</title>
+        <title>webTextBook ver 0.0.4</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -9,29 +9,18 @@
         <script src="../dist/webTextBook.js"></script>
     </head>
     <body>
-        <h1>webTextBook ver 0.0.1</h1>
 
-        <div id="mainBackground"></div>
-        <div id="mainTitleAni"></div>
+        <div id="mainContainer">
+            <div id="mainIndexList"></div>
+            <div id="teacherArchive"></div>
+            <div id="mainTitleAni"></div>
+            <div id="mainFooter"></div>
+        </div>
 
         <script>
-
-            window.runMain();
-
-           /* document.addEventListener('DOMContentLoaded', function () {
-
-
-                /!*window.AniDom({
-
-				});*!/
-
-
-
-
-
-
-
-            }, false);*/
+            document.addEventListener('DOMContentLoaded', function () {
+                window.runMain();
+            }, false);
 
         </script>
     </body>

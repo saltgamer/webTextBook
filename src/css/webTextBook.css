@@ -8,98 +8,163 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.mainBackground {
+#mainContainer {
+    width: 1171px;
+    height: 769px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+
+    user-select: none;
+    -ms-user-select: none;
+}
+
+#mainBackground {
     position: absolute;
-    width: 1280px;
-    height: 720px;
-    background-image: url('../images/sceneBg.png');
+    top: 0;
+    left: 0;
+    width: 1171px;
+    height: 768px;
     background-repeat: no-repeat;
 }
 
-.bgPlant {
+
+
+/* mainIndexList*/
+.indexListBox_theme_el_art1 {
     position: absolute;
-    bottom: 2px;
-    right: 120px;
-    width: 589px;
+    top: 35px;
+    left: 65px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 2px #69b378;
+    border-radius: 3px;
+ /*   border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+
 }
 
-.monkeyBox {
+.indexListBox_theme_el_art1 > .firstItem_theme_el_art1 {
+    width: 255px;
+    height: 50px;
+    /*background-color: #ff9900;*/
+    background: #68cb70; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#68cb70, #58c75e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#68cb70, #58c75e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#68cb70, #58c75e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#68cb70, #58c75e); /* Standard syntax */
+
+    /*box-shadow: 0 3px 0 0 #333;*/
+    text-shadow: 0 0 2px #333;
+    cursor: pointer;
+
+
+    border: 2px solid #97dc99;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 50px;
+
+    transition: 2s;
+}
+
+.firstItemText {
+    padding-left: 35px;
+    background-image: url('../images/arrowIcon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+}
+
+.secondBox {
+    background-color: #fff;
+    border-radius: 3px;
+    /*padding-bottom: 12px;*/
+    /*display: none;*/
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.secondItem_theme_el_art1 {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 900;
+    padding-left: 10px;
+    /*padding-top: 4px;*/
+    /*padding-bottom: 4px;*/
+    line-height: 25px;
+
+}
+
+.secondItem_theme_el_art1:hover {
+    color: #4cbf62;
+    cursor: pointer;
+}
+
+#mainFooter {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+
 }
 
-.monkeyBody {
-    position: absolute;
-    bottom: 12px;
-    right: 128px;
-    width: 170px;
+.mainFooterBox {
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 11px;
 }
 
-.monkeyHead {
+.mainFooterUseGuideButton {
     position: absolute;
-    bottom: 156px;
-    right: 205px;
-    width: 130px;
+    top: -53px;
+    left: 75px;
+    width: 90px;
+    height: 30px;
+
+    background: #ec573f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f47258, #e84330); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f47258, #e84330); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f47258, #e84330); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f47258, #e84330); /* Standard syntax */
+
+    box-shadow: 0 3px 5px 0 #ccc;
+    text-shadow: 0 0 2px #333;
+    cursor: pointer;
+
+    border-radius: 20px;
+    border: 3px solid #f1aba1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+
+    line-height: 32px;
+    padding-left: 25px;
+
+
 }
 
-.monkeyRightArm {
+.mainFooterGoldStarLogo {
     position: absolute;
-    bottom: 165px;
-    right: 268px;
-    width: 105px;
-    transform-origin: 90% 90%;
+    top: -40px;
+    right: 50px;
+    width: 150px;
+
 }
 
-.monkeyLeftArm {
+.mainTHubLogo {
     position: absolute;
-    bottom: 165px;
-    right: 186px;
-    width: 70px;
-    transform-origin: 90% 90%;
-}
+    top: 35px;
+    right: 65px;
+    width: 95px;
+    cursor: pointer;
 
-.monkeyEar {
-    position: absolute;
-    bottom: 208px;
-    right: 185px;
-    width: 35px;
-}
-
-.monkeyTail {
-    position: absolute;
-    bottom: 66px;
-    right: 268px;
-    width: 140px;
-    transform-origin: 90% 90%;
-}
-
-.boyBox {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.boyBody {
-    position: absolute;
-    bottom: 2px;
-    right: 0;
-    width: 356px;
-}
-
-.boyHead {
-    position: absolute;
-    bottom: 300px;
-    right: 46px;
-    width: 170px;
-    transform-origin: 90% 90%;
-}
-
-.boyArm {
-    position: absolute;
-    bottom: 233px;
-    right: 97px;
-    width: 100px;
 }

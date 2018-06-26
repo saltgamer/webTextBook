@@ -1,0 +1,172 @@
+/***
+ * file name : LayerPop.css
+ * description : LayerPop style file
+ * create date : 2018-06-22
+ * creator : saltgamer
+ ***/
+
+.layerPopContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+
+}
+
+.layerPopBox {
+    position: relative;
+    width: 1060px;
+    height: 660px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -330px 0 0 -530px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px 2px #333;
+
+}
+
+.layerPopBox > .closeButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.layerPopBox > .contentTableBox {
+    position: relative;
+    width: 100%;
+    top: 110px;
+}
+
+.layerPopBox > .contentTableBox > .contentTable {
+    width: 1000px;
+    border: 0;
+    border-collapse: collapse;
+    margin-left: 30px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.layerPopBox > .contentTableBox > .contentTable > tr > th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.layerPopBox > .contentTableBox > .contentTable > tr > th {
+    color: #fff;
+}
+
+.layerPopBox > .contentTableBox > .contentTable > tr > td {
+    color: #363636;
+    font-weight: 900;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.thBgColor_theme_el_art1 {
+    background-color: #f1663b;
+}
+
+.tdBgColor_theme_el_art1 {
+    background-color: #eee;
+}
+
+.goButton {
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    /*background-color: #646464;*/
+    background: #686868; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#828282, #5d5d5d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#828282, #5d5d5d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#828282, #5d5d5d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#828282, #5d5d5d); /* Standard syntax */
+
+    border: 2px solid #646464;
+    line-height: 18px;
+}
+
+.dataIcon {
+    width: 50px;
+    cursor: pointer;
+
+}
+
+.tdLabelIcon_0 {
+    background: #ed6245; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ee7c62 , #cc4935); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ee7c62 , #cc4935); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ee7c62 , #cc4935); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ee7c62 , #cc4935); /* Standard syntax */
+
+    border: 2px solid #e44f39;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_1 {
+    background: #29bda5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#51d7bf , #25b197); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#51d7bf , #25b197); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#51d7bf , #25b197); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#51d7bf , #25b197); /* Standard syntax */
+
+    border: 2px solid #2abf9f;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_2 {
+    background: #ad57de; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c877ed , #9946cc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c877ed , #9946cc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c877ed , #9946cc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c877ed , #9946cc); /* Standard syntax */
+
+    border: 2px solid #a94bd7;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.tdLabelIcon_3 {
+    background: #3990e0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#65b7ef , #3684d7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#65b7ef , #3684d7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#65b7ef , #3684d7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#65b7ef , #3684d7); /* Standard syntax */
+
+    border: 2px solid #388ee3;
+    border-radius: 20px;
+    color: #fff;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+

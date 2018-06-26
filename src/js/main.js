@@ -6,33 +6,46 @@
  ***/
 
 import '../css/webTextBook.css';
-import AniDom from './aniDom/AniDom';
-import {mainTitleAni} from './main/mainSection';
+import {mainIndexList, mainTitleAni} from './main/mainSection';
 import {$qs} from './utility';
+import Responsive from './Rsponsive';
+import Loading from './Loading';
+import {addTeacherArchive} from './archive/archiveSection';
 
 
-async function main() {
+/*async function main() {
+    Loading.show();
 
+    const responsive = new Responsive({
+        target: $qs('#mainContainer')
+    });
+    await mainIndexList($qs('#mainIndexList'));
     await mainTitleAni($qs('#mainTitleAni'));
 
-    // const aniDom = new AniDom(params);
-    // console.log('-> aniDom: ', aniDom);
+
+}*/
+function main() {
+    Loading.show();
+
+    mainIndexList($qs('#mainIndexList'))
+        .then(() => {
+            console.log('-- step1');
+            return mainTitleAni($qs('#mainTitleAni'));
+        })
+        .then(() => {
+            console.log('-- step2');
+            const responsive = new Responsive({
+                target: $qs('#mainContainer')
+            });
+        });
+
+    addTeacherArchive($qs('#teacherArchive'));
 
 
 }
 
 window.runMain = () => {
     main();
-
-
-
 };
 
-/*
-window.AniDom = (params) => {
-    const aniDom = new AniDom(params);
-    console.log('-> aniDom: ', aniDom);
-
-};
-*/
 
