@@ -82,6 +82,12 @@ function initTeacherArchive(parent, data) {
         alert('[!] data 폴더에 archive.json 파일에 archiveData 항목이 잘못되었습니다.');
     }
 
+    const teacherArchiveButtonShadow = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'teacherArchiveButtonShadow_' + theme.getClass()
+        },
+        parent: parent
+    });
 
     const teacherArchiveButton = DOMBuilder.createElement('div', {
         attrs: {

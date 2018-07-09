@@ -22,9 +22,10 @@ export function mainIndexList(target) {
             theme = new Theme(meta.textBookCode);
             console.log('--> theme: ', theme);
             initBackGround(target.parentNode);
+            initTitle(target.parentNode);
             initIndexList(target, meta);
-
-            initFooter($qs('#mainFooter'))
+            initUserGuide(target.parentNode);
+            initFooter($qs('#mainFooter'));
         });
 
 
@@ -67,12 +68,16 @@ function initIndexList(target, meta) {
         }, false);
 
         if (idx === 0) {
-            firstItem.style.borderTopLeftRadius = '3px';
-            firstItem.style.borderTopRightRadius = '3px';
+            /*firstItem.style.borderTopLeftRadius = '3px';
+            firstItem.style.borderTopRightRadius = '3px';*/
+            firstItem.style.borderTopLeftRadius = '15px';
+            firstItem.style.borderTopRightRadius = '15px';
+
         }
         if (idx === meta.indexList.length - 1) {
             firstItem.style.borderBottomRightRadius = '3px';
             firstItem.style.borderBottomLeftRadius = '3px';
+            firstItem.style.borderBottom = '0';
         }
 
         const firstItemText = DOMBuilder.createElement('div', {
@@ -157,7 +162,7 @@ function initBackGround(target) {
         parent: target,
         insertBefore: true
     });
-    mainBackGround.style.backgroundImage = 'url(./theme/' + theme.textBookCode + '/mainBg.jpg)';
+    mainBackGround.style.backgroundImage = 'url(./theme/' + theme.textBookCode + '/mainBg.png)';
 
     const mainTHubLogo = DOMBuilder.createElement('img', {
         attrs: {
@@ -187,12 +192,11 @@ function resetIndexList() {
     }
 }
 
-function initFooter(target) {
-    const mainFooterBox = DOMBuilder.createElement('div', {
+function initUserGuide(target) {
+    const mainFooterUseGuideButtonShadow = DOMBuilder.createElement('div', {
         attrs: {
-            class: 'mainFooterBox'
+            class: 'mainFooterUseGuideButtonShadow'
         },
-        text: '※ 저작권자의 사전 허가 없이 학교 수업 이외의 목적으로 사용할 경우, 저작권법에 의해 처벌 받을 수 있습니다.',
         parent: target
     });
 
@@ -200,7 +204,7 @@ function initFooter(target) {
         attrs: {
             class: 'mainFooterUseGuideButton'
         },
-        text: '이용안내',
+        text: '<div class="mainFooterUseGuideIcon">?</div>' + '이용안내',
         parent: target
     });
     mainFooterUseGuideButton.addEventListener('click', (e) => {
@@ -209,6 +213,16 @@ function initFooter(target) {
         console.log('--> userGuide button!');
 
     }, false);
+}
+
+function initFooter(target) {
+    const mainFooterBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'mainFooterBox'
+        },
+        text: '| &nbsp;&nbsp; 본 전자저작물은 저작권자의 사전 허가 없이 학교 수업 이외의 목적으로 이용할 경우, 저작권법에 의해 법적 처벌을 받을 수 있습니다.',
+        parent: target
+    });
 
     const mainFooterGoldStarLogo = DOMBuilder.createElement('img', {
         attrs: {
@@ -218,5 +232,15 @@ function initFooter(target) {
         parent: target
     });
 
+}
+
+function initTitle(target) {
+    const mainTitle = DOMBuilder.createElement('img', {
+        attrs: {
+            class: 'mainTitle_' + theme.getClass(),
+            src: './theme/' + theme.textBookCode + '/title.png'
+        },
+        parent: target
+    });
 }
 
