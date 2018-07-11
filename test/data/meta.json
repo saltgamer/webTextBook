@@ -19,7 +19,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "나도 디자이너가 될 수 있을까?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -31,7 +31,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -48,7 +48,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -65,7 +65,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -94,7 +94,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "로봇도 감각이 있다면?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -106,7 +106,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -123,7 +123,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -140,7 +140,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -169,7 +169,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "로봇도 감각이 있다면?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -181,7 +181,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -198,7 +198,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -215,7 +215,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -262,7 +262,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "나도 디자이너가 될 수 있을까?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -274,7 +274,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -291,7 +291,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -314,7 +314,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -343,7 +343,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "로봇도 감각이 있다면?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -355,7 +355,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -372,7 +372,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -389,7 +389,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -430,7 +430,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "나도 디자이너가 될 수 있을까?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -442,7 +442,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -459,7 +459,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -476,7 +476,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [
@@ -505,7 +505,7 @@
                         },
                         "third": [
                             {
-                                "label": "궁금해요",
+                                "label": "icon_wonder.png",
                                 "title": "로봇도 감각이 있다면?",
                                 "page": "1_1_1",
                                 "dataList": [
@@ -517,7 +517,7 @@
                                 ]
                             },
                             {
-                                "label": "알아보아요",
+                                "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
                                 "page": "1_2_1",
                                 "dataList": [
@@ -534,7 +534,7 @@
                                 ]
                             },
                             {
-                                "label": "표현해요",
+                                "label": "icon_show.png",
                                 "title": "느낌 표현하기",
                                 "page": "1_3_1",
                                 "dataList": [
@@ -551,7 +551,7 @@
                                 ]
                             },
                             {
-                                "label": "마무리해요",
+                                "label": "icon_finish.png",
                                 "title": "감각을 살린 미술 작품",
                                 "page": "1_4_1",
                                 "dataList": [

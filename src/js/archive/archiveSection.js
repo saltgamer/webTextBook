@@ -10,6 +10,7 @@ import {loadJSON} from '../utility';
 import DOMBuilder from '../utility/DOMBuilder';
 import Theme from '../Theme';
 import '../../css/archive.css';
+import ArchiveLayer from './ArchiveLayer';
 
 let theme;
 
@@ -20,13 +21,20 @@ export function addTeacherArchive(target) {
 
             if (!archive) alert('[!] archive.json 파일을 불러오는데 실패했습니다 \n\n 다시 실행해주세요.');
             theme = new Theme(archive.textBookCode);
-            initTeacherArchive(target, archive);
+
+            switch (archive.type) {
+                case 'list':
+                    initListArchive(target, archive);
+                    break;
+                case 'layer':
+                    initLayerArchive(target, archive);
+                    break;
+            }
 
         });
 }
 
-function initTeacherArchive(parent, data) {
-
+function initListArchive(parent, data) {
 
     const teacherArchiveMenu = DOMBuilder.createElement('div', {
         attrs: {
@@ -113,6 +121,36 @@ function initTeacherArchive(parent, data) {
     }, false);
 
 
+}
+
+function initLayerArchive(parent, data) {
+    parent.style.right = '310px';
+    const teacherArchiveButtonShadow = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'teacherArchiveButtonShadow_' + theme.getClass()
+        },
+        parent: parent
+    });
+
+    const teacherArchiveButton = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'teacherArchiveButton_' + theme.getClass()
+        },
+        text: data.buttonText,
+        parent: parent
+    });
+
+    teacherArchiveButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        ArchiveLayer.appendArchive({
+            parent: parent.parentNode,
+            data: data,
+            theme: theme
+        });
+
+
+    }, false);
 
 }
 

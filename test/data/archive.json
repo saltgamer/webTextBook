@@ -1,12 +1,320 @@
 {
     "textBookCode": "EL_ART1",
     "type": "layer",
-    "buttonText": "선생님 자료실<div style='position:absolute;font-size:10px;top:0;right:8px;'>▼</div>",
+    "buttonText": "선생님 자료실<div style='position:absolute;font-size:10px;top:0;right:13px;'>▼</div>",
+    "category": [
+        {
+            "name": "subject",
+            "label": "제재명",
+            "width": "28%"
+        },
+        {
+            "name": "teachingPlan",
+            "label": "단순<br>지도<br>계획",
+            "width": "7%"
+        },
+        {
+            "name": "classPlan",
+            "label": "수업지도안",
+            "width": "10%"
+        },
+        {
+            "name": "performance",
+            "label": "수행평가 &nbsp;자료",
+            "width": "9%"
+        },
+        {
+            "name": "pdf",
+            "label": "PDF",
+            "width": "20%",
+            "subTitle": [
+                {
+                    "name": "textbook",
+                    "label": "교과서 본문"
+                },
+                {
+                    "name": "guide",
+                    "label": "지도서 본문"
+                }
+            ]
+        },
+        {
+            "name": "media",
+            "label": "멀티미디어 자료",
+            "width": "26%",
+            "subTitle": [
+                {
+                    "name": "audio",
+                    "label": "음원"
+                },
+                {
+                    "name": "video",
+                    "label": "동영상"
+                }
+            ]
+        }
+
+    ],
     "archiveData": [
         {
+            "title": "1 <br> 두근두근 열리는 세상",
+            "datas": [
+                {
+                    "subject": "어깨 동무",
+                    "teachingPlan": [
+                        {
+                            "name": "지도계획",
+                            "type": "pdf",
+                            "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                        }
+                    ],
+                    "classPlan": [
+                        {
+                            "name": "수업지도안1",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        },
+                        {
+                            "name": "수업지도안2",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        }
+                    ],
+                    "performance": [],
+                    "pdf": {
+                        "textbook": [
+                            {
+                                "name": "교과서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                            }
+                        ],
+                        "guide": [
+                            {
+                                "name": "지도서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 지도서.pdf"
+                            }
+                        ]
+                    },
+                    "media": {
+                        "audio": [
+                            {
+                                "name": "음원",
+                                "type": "zip",
+                                "filePath": "./data/미디어/음원1.mp3"
+                            }
+                        ],
+                        "video": [
+                            {
+                                "name": "참다운 친구 (뽀뽀뽀 아이조아).mp4",
+                                "type": "zip",
+                                "filePath": "./data/미디어/영상1.mp4",
+                                "showName": true
+                            }
+                        ]
+                    }
 
+
+                },
+
+                {
+                    "subject": "구슬비",
+                    "teachingPlan": [
+                        {
+                            "name": "지도계획",
+                            "type": "pdf",
+                            "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                        }
+                    ],
+                    "classPlan": [
+                        {
+                            "name": "수업지도안1",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        },
+                        {
+                            "name": "수업지도안2",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        }
+                    ],
+                    "performance": [
+                        {
+                            "name": "수행평가",
+                            "type": "pdf",
+                            "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                        }
+                    ],
+                    "pdf": {
+                        "textbook": [
+                            {
+                                "name": "교과서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                            }
+                        ],
+                        "guide": [
+                            {
+                                "name": "지도서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 지도서.pdf"
+                            }
+                        ]
+                    },
+                    "media": {
+                        "audio": [
+                            {
+                                "name": "음원",
+                                "type": "zip",
+                                "filePath": "./data/미디어/음원1.mp3"
+                            }
+                        ],
+                        "video": [
+                            {
+                                "name": "참다운 친구 (뽀뽀뽀 아이조아).mp4",
+                                "type": "zip",
+                                "filePath": "./data/미디어/영상1.mp4",
+                                "showName": true
+                            }
+                        ]
+                    }
+
+
+                }
+
+
+
+            ]
 
         },
+
+        {
+            "title": "2 <br> 무럭무럭 자라는 세상",
+            "datas": [
+                {
+                    "subject": "어깨 22",
+                    "teachingPlan": [
+                        {
+                            "name": "지도계획",
+                            "type": "pdf",
+                            "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                        }
+                    ],
+                    "classPlan": [
+                        {
+                            "name": "수업지도안1",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        },
+                        {
+                            "name": "수업지도안2",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        }
+                    ],
+                    "performance": [],
+                    "pdf": {
+                        "textbook": [
+                            {
+                                "name": "교과서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                            }
+                        ],
+                        "guide": [
+                            {
+                                "name": "지도서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 지도서.pdf"
+                            }
+                        ]
+                    },
+                    "media": {
+                        "audio": [
+                            {
+                                "name": "음원",
+                                "type": "zip",
+                                "filePath": "./data/미디어/음원1.mp3"
+                            }
+                        ],
+                        "video": [
+                            {
+                                "name": "참다운 친구 (뽀뽀뽀 아이조아).mp4",
+                                "type": "zip",
+                                "filePath": "./data/미디어/영상1.mp4",
+                                "showName": true
+
+                            }
+                        ]
+                    }
+
+
+                },
+
+                {
+                    "subject": "이슬비2",
+                    "teachingPlan": [
+                        {
+                            "name": "지도계획",
+                            "type": "pdf",
+                            "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                        }
+                    ],
+                    "classPlan": [
+                        {
+                            "name": "수업지도안1",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        },
+                        {
+                            "name": "수업지도안2",
+                            "type": "hwp",
+                            "filePath": "./data/선생님자료실/초등 미술 4 연간지도계획표.hwp"
+                        }
+                    ],
+                    "performance": [],
+                    "pdf": {
+                        "textbook": [
+                            {
+                                "name": "교과서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 교과서.pdf"
+                            }
+                        ],
+                        "guide": [
+                            {
+                                "name": "지도서",
+                                "type": "pdf",
+                                "filePath": "./data/선생님자료실/초등 미술 4 지도서.pdf"
+                            }
+                        ]
+                    },
+                    "media": {
+                        "audio": [
+                            {
+                                "name": "음원",
+                                "type": "zip",
+                                "filePath": "./data/미디어/음원1.mp3"
+                            }
+                        ],
+                        "video": [
+                            {
+                                "name": "참다운 친구 (뽀뽀뽀 아이조아).mp4",
+                                "type": "zip",
+                                "filePath": "./data/미디어/영상1.mp4"
+                            }
+                        ]
+                    }
+
+
+                }
+
+
+
+            ]
+
+        }
 
     ]
 }

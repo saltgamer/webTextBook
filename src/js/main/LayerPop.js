@@ -109,11 +109,18 @@ export default class LayerPop {
                 parent: contentTr
             });
 
-            const tdLabelIcon = DOMBuilder.createElement('div', {
+          /*  const tdLabelIcon = DOMBuilder.createElement('div', {
                 attrs: {
                     class: 'tdLabelIcon_' + idx
                 },
                 text: value.label,
+                parent: tdLabel
+            });*/
+            const tdLabelIcon = DOMBuilder.createElement('img', {
+                attrs: {
+                    class: 'tdLabelIconImg',
+                    src: './images/' + value.label
+                },
                 parent: tdLabel
             });
 

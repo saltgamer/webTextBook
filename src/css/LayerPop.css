@@ -78,6 +78,7 @@
 
 .thBgColor_theme_el_art1 {
     background-color: #f1663b;
+    background-image: url('../images/bg_pattern.png');
 }
 
 .tdBgColor_theme_el_art1 {
@@ -86,7 +87,7 @@
 
 .goButton {
     width: 50px;
-    height: 25px;
+    height: 26px;
     color: #fff;
     cursor: pointer;
     border-radius: 20px;
@@ -97,8 +98,8 @@
     background: -moz-linear-gradient(#828282, #5d5d5d); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#828282, #5d5d5d); /* Standard syntax */
 
-    border: 2px solid #646464;
-    line-height: 18px;
+    /*border: 2px solid #646464;*/
+    line-height: 23px;
 }
 
 .dataIcon {

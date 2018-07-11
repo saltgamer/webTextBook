@@ -1,0 +1,120 @@
+/***
+ * file name : archiveLayer.css
+ * description : archiveLayer style file
+ * create date : 2018-07-10
+ * creator : saltgamer
+ ***/
+
+.archiveTitleBar {
+    position: relative;
+    top: 33px;
+    left: 27px;
+    width: 930px;
+    height: 55px;
+    font-size: 20px;
+    color: #fff;
+    background-image: url('../images/archiveIcon.png');
+    background-repeat: no-repeat;
+    background-position: 25px 13px;
+
+    background-color: #ed683b;
+    border-radius: 30px;
+    line-height: 55px;
+
+    padding-left: 70px;
+    font-weight: 900;
+    text-shadow: 0 0 1px #333;
+
+}
+
+.archiveAside {
+    position: relative;
+    top: 60px;
+    left: 30px;
+    width: 180px;
+    height: auto;
+
+
+}
+
+.fixedPanel {
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    background-color: #2dbb8d;
+    border-radius: 3px;
+    /*text-shadow: 0 0 1px #333;*/
+    line-height: 40px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.asidePanel {
+    width: 180px;
+    height: 60px;
+    color: #fff;
+    background-color: #b9bab4;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.archiveContentTableBox {
+    position: absolute;
+    top: 115px;
+    left: 230px;
+    width: 800px;
+    height: 520px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.archiveTable {
+    border: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+
+.archiveTrBgStyle {
+    background-color: #b9bab4;
+    color: #fff;
+    border-right: 0;
+}
+
+.archiveThStyle {
+    border-right: 1px solid #8d8d8b;
+    border-bottom: 1px solid #8d8d8b;
+    font-size: 14px;
+}
+
+.archiveDataTrStyle {
+    background-color: #fff;
+    color: #303030;
+    border-right: 2px solid #8c8d88;
+}
+
+.archiveDataTdStyle {
+    border: 1px solid #8c8d88;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 8px;
+}
+
+.archiveIcon {
+    cursor: pointer;
+    margin-right: 1px;
+    margin-left: 3px;
+}
+
+.archiveName {
+    cursor: pointer;
+    /*font-weight: 900;*/
+}
