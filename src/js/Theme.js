@@ -22,8 +22,17 @@ export default class Theme {
     getClass() {
         let code;
         switch (this.textBookCode) {
-            case 'EL_ART1':
-                code = 'theme_el_art1';
+            case 'EL_ART5':
+                code = 'theme_el_art5';
+                break;
+            case 'EL_MUS5':
+                code = 'theme_el_mus5';
+                break;
+            case 'EL_PRA5':
+                code = 'theme_el_pra5';
+                break;
+            case 'EL_PHY5':
+                code = 'theme_el_phy5';
                 break;
         }
 
@@ -35,24 +44,30 @@ export default class Theme {
     initTitleAni(target) {
 
         switch (this.textBookCode) {
-            case 'EL_ART1':
-
+            case 'EL_ART5':
                 return Promise.all([
-                    loadBoyImg(this.textBookCode),
-                    loadMonkeyImg(this.textBookCode)
+                    loadArtGirlImg(this.textBookCode),
+                    loadArtBoyImg(this.textBookCode),
+                    loadSwing(this.textBookCode)
                 ])
                     .then((imgs) => {
                         console.log('--> imgs: ', imgs);
-                        setMonkeyAni(target, imgs[1]);
-                        setBoyAni(target, imgs[0]);
+                        setArtGirlAni(target, imgs[0]);
+                        setArtBoyAni(target, imgs[1]);
+                        setSwingAni(target, imgs[2]);
 
                         Loading.hide();
                     });
 
+            // break;
+            case 'EL_MUS5':
+            case 'EL_PHY5':
+            case 'EL_PRA5':
+                Loading.hide();
+                break;
 
-                // break;
             default:
-                alert('textBookCode가 잘못되었습니다.');
+                alert('textBookCode가 잘못되었습니다. \n 현재 사용하지 않는 코드입니다.');
                 break;
         }
 
@@ -61,6 +76,39 @@ export default class Theme {
 
 }
 
+function loadArtGirlImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/girl_body.png',
+        './theme/' + textBookCode + '/girl_head.png',
+        './theme/' + textBookCode + '/girl_hand.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadArtBoyImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/boy_body.png',
+        './theme/' + textBookCode + '/boy_head1.png',
+        './theme/' + textBookCode + '/boy_hand.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadSwing(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/swing.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
 
 function loadBoyImg(textBookCode) {
     return loadImages(
@@ -88,6 +136,128 @@ function loadMonkeyImg(textBookCode) {
             // console.log('--> load img: ', img);
             return img;
         });
+}
+
+function setArtGirlAni(target, img) {
+    const artGirlBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'artGirlBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'artGirl_body';
+    img[1].className = 'artGirl_head';
+    img[2].className = 'artGirl_hand';
+
+    artGirlBox.appendChild(img[0]);
+    artGirlBox.appendChild(img[1]);
+    artGirlBox.appendChild(img[2]);
+
+    const girlHeadAni = initAniDom({
+        direction: 'normal',
+        loop: true
+    });
+    girlHeadAni.add({
+        targets: img[1],
+        rotate: -15,
+        duration: 2500
+    })
+    /*.add({
+        targets: img[1],
+        rotate: 0,
+        duration: 1500
+    })*/
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2500
+        })
+        .add({
+            targets: img[1],
+            rotate: 10,
+            duration: 2500
+        })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2500
+        });
+
+
+}
+
+function setArtBoyAni(target, img) {
+    const artBoyBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'artBoyBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'artBoy_body';
+    img[1].className = 'artBoy_head';
+    img[2].className = 'artBoy_hand';
+
+    artBoyBox.appendChild(img[0]);
+    artBoyBox.appendChild(img[1]);
+    artBoyBox.appendChild(img[2]);
+
+    const boyHeadAni = initAniDom({
+        direction: 'normal',
+        loop: true
+    });
+    boyHeadAni.add({
+        targets: img[1],
+        rotate: -15,
+        duration: 2000
+    })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2000
+        })
+        .add({
+            targets: img[1],
+            rotate: 15,
+            duration: 2000
+        })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2000
+        });
+
+
+}
+
+function setSwingAni(target, img) {
+    const swingBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'swingBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'swing';
+
+    swingBox.appendChild(img[0]);
+
+    const swingAni = initAniDom({
+        direction: 'normal',
+        loop: true
+    });
+    swingAni.add({
+        targets: img[0],
+        rotate: 20,
+        duration: 1000
+    })
+        .add({
+            targets: img[0],
+            rotate: 0,
+            duration: 1000
+        })
+
 }
 
 function setBoyAni(target, img) {

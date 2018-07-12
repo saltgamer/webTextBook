@@ -1,5 +1,5 @@
 {
-    "textBookCode": "EL_ART1",
+    "textBookCode": "EL_PHY5",
     "grade": "초등학교",
     "title": "미술3",
     "subTitle": "3~4학년군",
@@ -21,7 +21,7 @@
                             {
                                 "label": "icon_wonder.png",
                                 "title": "나도 디자이너가 될 수 있을까?",
-                                "page": "1_1_1",
+                                "page": "../ui.html?page=1_1_01_01",
                                 "dataList": [
                                     {
                                         "category": "learningProcess",
@@ -33,7 +33,7 @@
                             {
                                 "label": "icon_find.png",
                                 "title": "우리의 감각을 수집하라",
-                                "page": "1_2_1",
+                                "page": "../ui.html?page=1_1_01_02",
                                 "dataList": [
                                     {
                                         "category": "learningProcess",
@@ -50,7 +50,7 @@
                             {
                                 "label": "icon_show.png",
                                 "title": "느낌 표현하기",
-                                "page": "1_3_1",
+                                "page": "../ui.html?page=1_1_01_02",,
                                 "dataList": [
                                     {
                                         "category": "learningProcess",

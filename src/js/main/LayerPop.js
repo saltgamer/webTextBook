@@ -149,7 +149,10 @@ export default class LayerPop {
             goButton.setAttribute('page', value.page);
             goButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                alert('go ui page: ' + e.target.getAttribute('page'));
+                // alert('go ui page: ' + e.target.getAttribute('page'));
+
+                window.open(e.target.getAttribute('page'), '_blank');
+
 
             }, false);
             // console.log('---data: ', value);

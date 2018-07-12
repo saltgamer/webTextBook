@@ -76,12 +76,14 @@
 
 }
 
-.thBgColor_theme_el_art1 {
+.thBgColor_theme_el_art5, .thBgColor_theme_el_pra5,
+.thBgColor_theme_el_mus5, .thBgColor_theme_el_phy5 {
     background-color: #f1663b;
     background-image: url('../images/bg_pattern.png');
 }
 
-.tdBgColor_theme_el_art1 {
+.tdBgColor_theme_el_art5, .tdBgColor_theme_el_pra5,
+.tdBgColor_theme_el_mus5, .tdBgColor_theme_el_phy5{
     background-color: #eee;
 }
 

@@ -11,7 +11,8 @@
     right: 170px;
 }
 
-.teacherArchiveButton_theme_el_art1 {
+.teacherArchiveButton_theme_el_art5, .teacherArchiveButton_theme_el_pra5,
+.teacherArchiveButton_theme_el_mus5, .teacherArchiveButton_theme_el_phy5 {
     position: absolute;
     top: 0;
     left: -2px;
@@ -39,7 +40,8 @@
     transition: 2s;
 }
 
-.teacherArchiveButtonShadow_theme_el_art1 {
+.teacherArchiveButtonShadow_theme_el_art5, .teacherArchiveButtonShadow_theme_el_pra5,
+.teacherArchiveButtonShadow_theme_el_mus5, .teacherArchiveButtonShadow_theme_el_phy5 {
     position: absolute;
     top: -2px;
     left: -4px;
@@ -55,7 +57,8 @@
     border-radius: 15px;
 }
 
-.teacherArchiveMenu_theme_el_art1 {
+.teacherArchiveMenu_theme_el_art5, .teacherArchiveButton_theme_el_pra5,
+.teacherArchiveMenu_theme_el_mus5, .teacherArchiveButton_theme_el_phy5 {
     position: relative;
     top: -2px;
     width: 135px;

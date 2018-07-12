@@ -14,8 +14,8 @@ import ArchiveLayer from './ArchiveLayer';
 
 let theme;
 
-export function addTeacherArchive(target) {
-    return loadJSON('./data/archive.json')
+export function addTeacherArchive(target, code) {
+    return loadJSON('../../' + code + '/data/archive.json')
         .then((archive) => {
             console.log('--> archive: ', archive);
 

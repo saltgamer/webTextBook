@@ -6,6 +6,66 @@
  ***/
 
 
+
+.artGirlBox {
+    position: absolute;
+    top: 412px;
+    left: 435px;
+}
+
+.artGirl_body {
+    position: absolute;
+
+}
+
+.artGirl_head {
+    position: absolute;
+    top: -97px;
+    left: -26px;
+    transform-origin: 50% 90%;
+}
+
+.artGirl_hand {
+    position: absolute;
+    left: -18px;
+}
+
+.artBoyBox {
+    position: absolute;
+    top: 431px;
+    left: 113px;
+}
+
+.artBoy_body {
+    position: absolute;
+}
+
+.artBoy_head {
+    position: absolute;
+    top: -82px;
+    left: 14px;
+    transform-origin: 50% 90%;
+}
+
+.artBoy_hand {
+    position: absolute;
+    left: 13px;
+}
+
+.swingBox {
+    position: absolute;
+    top: 162px;
+    right: 184px;
+
+}
+
+.swing {
+    position: absolute;
+    transform-origin: 20% 10%;
+
+}
+
+
 /* mainAniTitle */
 .bgPlant {
     position: absolute;
@@ -94,8 +154,26 @@
     width: 100px;
 }
 
-.mainTitle_theme_el_art1 {
+.mainTitle_theme_el_art5 {
     position: absolute;
     top: 127px;
     left: 534px;
+}
+
+.mainTitle_theme_el_mus5 {
+    position: absolute;
+    top: 90px;
+    left: 529px;
+}
+
+.mainTitle_theme_el_pra5 {
+    position: absolute;
+    top: 105px;
+    left: 472px;
+}
+
+.mainTitle_theme_el_phy5 {
+    position: absolute;
+    top: 127px;
+    left: 440px;
 }

@@ -7,7 +7,7 @@
 
 import DOMBuilder from '../utility/DOMBuilder';
 import '../../css/ArchiveLayer.css';
-import {$qs} from '../utility';
+import {$qs, $qsa} from '../utility';
 
 export default class ArchiveLayer {
     constructor() {
@@ -100,17 +100,35 @@ export default class ArchiveLayer {
             asidePanel.addEventListener('click', (e) => {
                 e.preventDefault();
                 console.log(e.target);
-                ArchiveLayer.initArchiveTable($qs('.archiveContentTableBox'), data, e.target.getAttribute('archiveIndex'));
+
+                const element = e.target;
+
+                ArchiveLayer.clearPanel();
+
+                element.style.backgroundColor = '#98ba2f';
+
+                ArchiveLayer.initArchiveTable($qs('.archiveContentTableBox'), data, element.getAttribute('archiveIndex'));
             }, false);
+
+            if (idx === 0) {
+                asidePanel.style.backgroundColor = '#98ba2f';
+            }
 
         });
 
 
     }
 
+    static clearPanel() {
+        const panels = $qsa('.asidePanel');
+
+        panels.forEach((value) => {
+            value.style.backgroundColor = '#b9bab4';
+        });
+    }
+
     static initArchiveTable(target, data, archiveIndex) {
-        console.log('-- initArchiveTable: ', archiveIndex);
-        // archiveIndex = parseInt(archiveIndex);
+        // console.log('-- initArchiveTable: ', archiveIndex);
         target.innerHTML = '';
 
         const contentTable = DOMBuilder.createElement('table', {

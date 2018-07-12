@@ -63,6 +63,10 @@
     font-weight: 900;
 }
 
+.asidePanel:hover {
+    background-color: #98ba2f;
+}
+
 .archiveContentTableBox {
     position: absolute;
     top: 115px;
@@ -118,3 +122,4 @@
     cursor: pointer;
     /*font-weight: 900;*/
 }
+

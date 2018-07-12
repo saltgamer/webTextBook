@@ -7,27 +7,20 @@
 
 import '../css/webTextBook.css';
 import {mainIndexList, mainTitleAni} from './main/mainSection';
-import {$qs} from './utility';
+import {$qs, getURLParameter} from './utility';
 import Responsive from './Rsponsive';
 import Loading from './Loading';
 import {addTeacherArchive} from './archive/archiveSection';
 
-
-/*async function main() {
-    Loading.show();
-
-    const responsive = new Responsive({
-        target: $qs('#mainContainer')
-    });
-    await mainIndexList($qs('#mainIndexList'));
-    await mainTitleAni($qs('#mainTitleAni'));
-
-
-}*/
 function main() {
     Loading.show();
 
-    mainIndexList($qs('#mainIndexList'))
+    const code = getURLParameter('code');
+    if (!code) {
+        alert('url 주소에 과목 코드 값이 없습니다. \n main.html?code= 값을 입력해주세요!');
+    }
+
+    mainIndexList($qs('#mainIndexList'), code)
         .then(() => {
             console.log('-- step1');
             return mainTitleAni($qs('#mainTitleAni'));
@@ -39,7 +32,7 @@ function main() {
             });
         });
 
-    addTeacherArchive($qs('#teacherArchive'));
+    addTeacherArchive($qs('#teacherArchive'), code);
 
 
 }

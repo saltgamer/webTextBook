@@ -14,8 +14,8 @@ let theme;
 const dataMap = new Map();
 
 
-export function mainIndexList(target) {
-    return loadJSON('./data/meta.json')
+export function mainIndexList(target, code) {
+    return loadJSON('../../' + code + '/data/meta.json')
         .then((meta) => {
             console.log('--> meta: ', meta);
             if (!meta) alert('[!] meta.json 파일을 불러오는데 실패했습니다 \n\n 다시 실행해주세요.');
