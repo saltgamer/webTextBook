@@ -120,7 +120,8 @@ function initIndexList(target, meta) {
 
                     const page = e.target.getAttribute('page');
                     if (page) {
-                        alert('ui 페이지로 이동: '+ page);
+                        // alert('ui 페이지로 이동: '+ page);
+                        window.open(e.target.getAttribute('page'), '_blank');
                     } else {
                         const dataMapKey = e.target.getAttribute('dataMapKey');
                         LayerPop.append({

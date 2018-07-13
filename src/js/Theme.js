@@ -245,17 +245,18 @@ function setSwingAni(target, img) {
 
     const swingAni = initAniDom({
         direction: 'normal',
+        easing: 'linear',
         loop: true
     });
     swingAni.add({
         targets: img[0],
-        rotate: 20,
-        duration: 1000
+        rotate: 15,
+        duration: 1500
     })
         .add({
             targets: img[0],
             rotate: 0,
-            duration: 1000
+            duration: 1500
         })
 
 }
