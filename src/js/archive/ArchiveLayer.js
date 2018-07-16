@@ -9,6 +9,8 @@ import DOMBuilder from '../utility/DOMBuilder';
 import '../../css/ArchiveLayer.css';
 import {$qs, $qsa} from '../utility';
 
+let currentRowspanKey = '';
+
 export default class ArchiveLayer {
     constructor() {
         throw new Error('--> This is static class. Creating instances is forbidden.');
@@ -152,6 +154,7 @@ export default class ArchiveLayer {
             parent: contentTable
         });
 
+
         data.category.forEach((value, idx) => {
             const contentTh1 = DOMBuilder.createElement('th', {
                 attrs: {
@@ -213,7 +216,6 @@ export default class ArchiveLayer {
     }
 
     static appendIcon(target, index, data, archiveData) {
-
         const aData = archiveData[data.category[index].name];
         if (aData.length || aData.length === 0) {
 
@@ -225,36 +227,7 @@ export default class ArchiveLayer {
             });
             if (aData.length > 0) {
                 for (let i = 0; i < aData.length; i++) {
-                    if (aData[i].showName) {
-                        const archiveName = DOMBuilder.createElement('div', {
-                            attrs: {
-                                class: 'archiveName',
-                                filePath: aData[i].filePath
-                            },
-                            text: aData[i].name,
-                            parent: archiveDataTd2
-                        });
-                        archiveName.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            window.open(e.target.getAttribute('filePath'), '_blank');
-
-                        }, false);
-                    } else {
-                        const archiveIcon = DOMBuilder.createElement('img', {
-                            attrs: {
-                                class: 'archiveIcon',
-                                filePath: aData[i].filePath,
-                                src: './images/iconSmall_' + aData[i].type.toLowerCase() + '.png'
-                            },
-                            parent: archiveDataTd2
-                        });
-                        archiveIcon.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            window.open(e.target.getAttribute('filePath'), '_blank');
-
-                        }, false);
-                    }
-
+                    ArchiveLayer.choice(i, aData, archiveDataTd2, target);
                 }
             }
 
@@ -268,37 +241,7 @@ export default class ArchiveLayer {
                 });
                 const subData = aData[index];
                 for (let i = 0; i < subData.length; i++) {
-
-                    if (subData[i].showName) {
-                        const archiveName = DOMBuilder.createElement('div', {
-                            attrs: {
-                                class: 'archiveName',
-                                filePath: subData[i].filePath
-                            },
-                            text: subData[i].name,
-                            parent: archiveDataTd2
-                        });
-                        archiveName.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            window.open(e.target.getAttribute('filePath'), '_blank');
-
-                        }, false);
-                    } else {
-                        const archiveIcon = DOMBuilder.createElement('img', {
-                            attrs: {
-                                class: 'archiveIcon',
-                                filePath: subData[i].filePath,
-                                src: './images/iconSmall_' + subData[i].type.toLowerCase() + '.png'
-                            },
-                            parent: archiveDataTd2
-                        });
-                        archiveIcon.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            window.open(e.target.getAttribute('filePath'), '_blank');
-
-                        }, false);
-                    }
-
+                    ArchiveLayer.choice(i, subData, archiveDataTd2, target);
                 }
             }
 
@@ -307,5 +250,55 @@ export default class ArchiveLayer {
 
     }
 
+    static choice(i, aData, archiveDataTd2, parent) {
+
+        if (aData[i].rowspan) {
+            if (aData[i].rowspanKey) {
+                currentRowspanKey = aData[i].rowspanKey;
+            } else {
+                alert('[!] currentRowspanKey 항목이 누락되었습니다!');
+            }
+            archiveDataTd2.setAttribute('rowspan', aData[i].rowspan);
+        } else {
+            if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey) {
+                parent.removeChild(archiveDataTd2);
+
+            }
+        }
+
+        if (aData[i].type) {
+            if (aData[i].showName) {
+                const archiveName = DOMBuilder.createElement('div', {
+                    attrs: {
+                        class: 'archiveName',
+                        filePath: aData[i].filePath
+                    },
+                    text: aData[i].name,
+                    parent: archiveDataTd2
+                });
+                archiveName.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open(e.target.getAttribute('filePath'), '_blank');
+
+                }, false);
+            } else {
+
+                const archiveIcon = DOMBuilder.createElement('img', {
+                    attrs: {
+                        class: 'archiveIcon',
+                        filePath: aData[i].filePath,
+                        src: './images/iconSmall_' + aData[i].type.toLowerCase() + '.png'
+                    },
+                    parent: archiveDataTd2
+                });
+                archiveIcon.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open(e.target.getAttribute('filePath'), '_blank');
+
+                }, false);
+            }
+        }
+
+    }
 
 }

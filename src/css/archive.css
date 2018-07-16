@@ -9,6 +9,7 @@
     position: absolute;
     top: 30px;
     right: 170px;
+    z-index: 10;
 }
 
 .teacherArchiveButton_theme_el_art5, .teacherArchiveButton_theme_el_pra5,

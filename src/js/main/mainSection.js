@@ -19,7 +19,8 @@ export function mainIndexList(target, code) {
         .then((meta) => {
             console.log('--> meta: ', meta);
             if (!meta) alert('[!] meta.json 파일을 불러오는데 실패했습니다 \n\n 다시 실행해주세요.');
-            theme = new Theme(meta.textBookCode);
+            // theme = new Theme(meta.textBookCode);
+            theme = new Theme(code);
             console.log('--> theme: ', theme);
             initBackGround(target.parentNode);
             initTitle(target.parentNode);
@@ -139,6 +140,11 @@ function initIndexList(target, meta) {
                 }
                 if (idx2 === value.first.second.length - 1) {
                     secondItem.style.paddingBottom = '7px';
+                }
+
+                if (!second.enable) {
+                    secondItem.style.pointerEvents = 'none';
+                    secondItem.style.opacity = 0.3;
                 }
 
             });

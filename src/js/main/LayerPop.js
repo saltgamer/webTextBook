@@ -86,13 +86,14 @@ export default class LayerPop {
 
         for (let category in data.dataCategory) {
             const dataCategory = DOMBuilder.createElement('th', {
-                attrs: {
-                },
+                attrs: {},
                 text: data.dataCategory[category],
                 parent: contentTr
             });
 
         }
+
+        let currentRowspanKey = '';
 
         data.third.forEach((value, idx) => {
             const contentTr = DOMBuilder.createElement('tr', {
@@ -103,39 +104,35 @@ export default class LayerPop {
             });
 
             const tdLabel = DOMBuilder.createElement('td', {
-                attrs: {
-                },
-                // text: value.label,
+                attrs: {},
                 parent: contentTr
             });
 
-          /*  const tdLabelIcon = DOMBuilder.createElement('div', {
-                attrs: {
-                    class: 'tdLabelIcon_' + idx
-                },
-                text: value.label,
-                parent: tdLabel
-            });*/
-            const tdLabelIcon = DOMBuilder.createElement('img', {
-                attrs: {
-                    class: 'tdLabelIconImg',
-                    src: './images/' + value.label
-                },
-                parent: tdLabel
-            });
-
-
             const tdTitle = DOMBuilder.createElement('td', {
-                attrs: {
-                },
+                attrs: {},
                 text: value.title,
                 parent: contentTr
             });
             tdTitle.style.textAlign = 'left';
 
+            if (value.label) {
+                const tdLabelIcon = DOMBuilder.createElement('img', {
+                    attrs: {
+                        class: 'tdLabelIconImg',
+                        src: './images/' + value.label
+                    },
+                    parent: tdLabel
+                });
+
+            } else {
+                tdLabel.style.border = 0;
+                tdLabel.style.borderBottom = '1px solid #fff';
+                tdTitle.style.border = 0;
+                tdTitle.style.borderBottom = '1px solid #fff';
+            }
+
             const tdGo = DOMBuilder.createElement('td', {
-                attrs: {
-                },
+                attrs: {},
                 parent: contentTr
             });
 
@@ -150,41 +147,62 @@ export default class LayerPop {
             goButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 // alert('go ui page: ' + e.target.getAttribute('page'));
-
                 window.open(e.target.getAttribute('page'), '_blank');
-
 
             }, false);
             // console.log('---data: ', value);
 
             for (let category in data.dataCategory) {
-
                 const dataCategory = DOMBuilder.createElement('td', {
-                    attrs: {
-                    },
+                    attrs: {},
                     text: '',
                     parent: contentTr
                 });
+                if (data.thirdPadding) {
+                    dataCategory.style.paddingTop = data.thirdPadding + 'px';
+                    dataCategory.style.paddingBottom = data.thirdPadding + 'px';
+                }
 
                 for (let i = 0; i < value.dataList.length; i++) {
                     if (value.dataList[i].category === category) {
-                        const dataIcon = DOMBuilder.createElement('img', {
-                            attrs: {
-                                class: 'dataIcon',
-                                src: './images/' + value.dataList[i].type + '_icon.png'
-                            },
-                            parent: dataCategory
-                        });
 
-                        dataIcon.setAttribute('filePath', value.dataList[i].filePath);
+                        if (value.dataList[i].type) {
+                            const dataIcon = DOMBuilder.createElement('img', {
+                                attrs: {
+                                    class: 'dataIcon',
+                                    src: './images/' + value.dataList[i].type + '_icon.png'
+                                },
+                                parent: dataCategory
+                            });
 
-                        dataIcon.addEventListener('click', (e) => {
-                            e.preventDefault();
+                            dataIcon.setAttribute('filePath', value.dataList[i].filePath);
 
-                            // window.location.href = e.target.getAttribute('filePath');
+                            dataIcon.addEventListener('click', (e) => {
+                                e.preventDefault();
 
-                            window.open(e.target.getAttribute('filePath'), '_blank');
-                        }, false);
+                                // window.location.href = e.target.getAttribute('filePath');
+
+                                window.open(e.target.getAttribute('filePath'), '_blank');
+                            }, false);
+                        }
+
+                        if (value.dataList[i].rowspan) {
+                            if (value.dataList[i].rowspanKey) {
+                                currentRowspanKey = value.dataList[i].rowspanKey;
+                            } else {
+                                alert('[!] currentRowspanKey 항목이 누락되었습니다!');
+                            }
+                            dataCategory.setAttribute('rowspan', value.dataList[i].rowspan);
+
+                        } else {
+                            /*console.log('--> rowspanKey: ', value.dataList[i].rowspanKey);
+                            console.log('--> currentRowspanKey: ', currentRowspanKey);*/
+                            if (value.dataList[i].rowspanKey && value.dataList[i].rowspanKey === currentRowspanKey) {
+                                contentTr.removeChild(dataCategory);
+
+                            }
+                        }
+
 
                     }
                 }
@@ -192,6 +210,15 @@ export default class LayerPop {
 
             }
 
+            if (data.thirdPadding) {
+                [tdLabel, tdTitle, tdGo].forEach((ele) => {
+                    ele.style.paddingTop = data.thirdPadding + 'px';
+                    ele.style.paddingBottom = data.thirdPadding + 'px';
+
+                });
+
+
+            }
 
         });
 
@@ -201,7 +228,6 @@ export default class LayerPop {
     static remove(parent, target) {
         if (parent && target) parent.removeChild(target);
     }
-
 
 
 }

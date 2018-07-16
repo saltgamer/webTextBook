@@ -20,7 +20,7 @@ export function addTeacherArchive(target, code) {
             console.log('--> archive: ', archive);
 
             if (!archive) alert('[!] archive.json 파일을 불러오는데 실패했습니다 \n\n 다시 실행해주세요.');
-            theme = new Theme(archive.textBookCode);
+            theme = new Theme(code);
 
             switch (archive.type) {
                 case 'list':

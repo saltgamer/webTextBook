@@ -12,8 +12,8 @@ import DOMBuilder from './utility/DOMBuilder';
 import '../css/Theme.css';
 
 export default class Theme {
-    constructor(textBookCode) {
-        this.textBookCode = textBookCode;
+    constructor(code) {
+        this.textBookCode = code;
         this.class = this.getClass();
 
 
@@ -22,16 +22,16 @@ export default class Theme {
     getClass() {
         let code;
         switch (this.textBookCode) {
-            case 'EL_ART5':
+            case 'art_5':
                 code = 'theme_el_art5';
                 break;
-            case 'EL_MUS5':
+            case 'mus_5':
                 code = 'theme_el_mus5';
                 break;
-            case 'EL_PRA5':
+            case 'pra_5':
                 code = 'theme_el_pra5';
                 break;
-            case 'EL_PHY5':
+            case 'gym_5':
                 code = 'theme_el_phy5';
                 break;
         }
@@ -44,7 +44,7 @@ export default class Theme {
     initTitleAni(target) {
 
         switch (this.textBookCode) {
-            case 'EL_ART5':
+            case 'art_5':
                 return Promise.all([
                     loadArtGirlImg(this.textBookCode),
                     loadArtBoyImg(this.textBookCode),
@@ -60,9 +60,9 @@ export default class Theme {
                     });
 
             // break;
-            case 'EL_MUS5':
-            case 'EL_PHY5':
-            case 'EL_PRA5':
+            case 'mus_5':
+            case 'pra_5':
+            case 'gym_5':
                 Loading.hide();
                 break;
 
