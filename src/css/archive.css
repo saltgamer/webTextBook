@@ -16,8 +16,8 @@
 .teacherArchiveButton_theme_el_mus5, .teacherArchiveButton_theme_el_phy5 {
     position: absolute;
     top: 0;
-    left: -2px;
-    width: 124px;
+    left: 2px;
+    width: 128px;
     height: 32px;
     background: #f2622d; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#f57e3e, #ee4e24); /* For Safari 5.1 to 6.0 */
@@ -45,8 +45,8 @@
 .teacherArchiveButtonShadow_theme_el_mus5, .teacherArchiveButtonShadow_theme_el_phy5 {
     position: absolute;
     top: -2px;
-    left: -4px;
-    width: 146px;
+    left: 0;
+    width: 148px;
     height: 36px;
     background: #f2622d; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#fbc7ab, #d74c27); /* For Safari 5.1 to 6.0 */
@@ -58,11 +58,11 @@
     border-radius: 15px;
 }
 
-.teacherArchiveMenu_theme_el_art5, .teacherArchiveButton_theme_el_pra5,
-.teacherArchiveMenu_theme_el_mus5, .teacherArchiveButton_theme_el_phy5 {
+.teacherArchiveMenu_theme_el_art5, .teacherArchiveMenu_theme_el_pra5,
+.teacherArchiveMenu_theme_el_mus5, .teacherArchiveMenu_theme_el_phy5 {
     position: relative;
     top: -2px;
-    width: 135px;
+    width: 145px;
     background-color: #fff;
     /*padding-left: 10px;*/
     font-size: 14px;

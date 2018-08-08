@@ -93,7 +93,7 @@ export default class LayerPop {
 
         }
 
-        let currentRowspanKey = '';
+        let currentRowspanKey = [];
 
         data.third.forEach((value, idx) => {
             const contentTr = DOMBuilder.createElement('tr', {
@@ -184,11 +184,16 @@ export default class LayerPop {
 
                                 window.open(e.target.getAttribute('filePath'), '_blank');
                             }, false);
+
+                            if (value.dataList[i].isDisable) {
+                                dataIcon.style.opacity = 0.2;
+                                dataIcon.style.pointerEvents = 'none';
+                            }
                         }
 
                         if (value.dataList[i].rowspan) {
                             if (value.dataList[i].rowspanKey) {
-                                currentRowspanKey = value.dataList[i].rowspanKey;
+                                currentRowspanKey.push(value.dataList[i].rowspanKey);
                             } else {
                                 alert('[!] currentRowspanKey 항목이 누락되었습니다!');
                             }
@@ -196,11 +201,19 @@ export default class LayerPop {
 
                         } else {
                             /*console.log('--> rowspanKey: ', value.dataList[i].rowspanKey);
-                            console.log('--> currentRowspanKey: ', currentRowspanKey);*/
-                            if (value.dataList[i].rowspanKey && value.dataList[i].rowspanKey === currentRowspanKey) {
-                                contentTr.removeChild(dataCategory);
+                            console.log('--> currentRowspanKey: ', currentRowspanKey);
+                            console.log('--> idx: ', idx);
+                            console.log('--> i ', i);*/
 
+                            if (currentRowspanKey.length > 0) {
+                                for (let j = 0; j < currentRowspanKey.length; j++) {
+                                    if (value.dataList[i].rowspanKey && value.dataList[i].rowspanKey === currentRowspanKey[j]) {
+                                        contentTr.removeChild(dataCategory);
+
+                                    }
+                                }
                             }
+
                         }
 
 

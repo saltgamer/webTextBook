@@ -163,7 +163,7 @@
 .mainTitle_theme_el_mus5 {
     position: absolute;
     top: 90px;
-    left: 529px;
+    right: 50px;
 }
 
 .mainTitle_theme_el_pra5 {
@@ -177,3 +177,105 @@
     top: 127px;
     left: 440px;
 }
+
+.musBoyBox {
+    position: absolute;
+    top: 358px;
+    left: 560px;
+}
+
+.musBoy_body {
+    position: absolute;
+}
+
+.musBoy_head {
+    position: absolute;
+    top: -114px;
+    left: -44px;
+    transform-origin: 50% 95%;
+}
+
+.musGirlBox {
+    position: absolute;
+    top: 376px;
+    left: 680px;
+}
+
+.musGirl_body {
+    position: absolute;
+}
+
+.musGirl_head {
+    position: absolute;
+    top: -75px;
+    left: 47px;
+    transform-origin: 50% 90%;
+}
+
+.musETClBox {
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+
+.musStar1 {
+    position: absolute;
+    top: 95px;
+    left: 280px;
+}
+
+.musStar2 {
+    position: absolute;
+    top: 135px;
+    left: 271px;
+}
+
+.musStar3 {
+    position: absolute;
+    top: 126px;
+    left: 321px;
+}
+
+.musNote1 {
+    position: absolute;
+    top: 226px;
+    left: 0;
+}
+
+.musNote2 {
+    position: absolute;
+    top: 260px;
+    left: -8px;
+}
+
+.musNote3 {
+    position: absolute;
+    top: 238px;
+    left: 14px;
+}
+
+.musNote4 {
+    position: absolute;
+    top: 270px;
+    left: 18px;
+}
+
+.musNote5 {
+    position: absolute;
+    top: 272px;
+    left: 333px;
+}
+
+.musNote6 {
+    position: absolute;
+    top: 298px;
+    left: 322px;
+}
+
+.musNote7 {
+    position: absolute;
+    top: 250px;
+    left: 320px;
+}
+
+

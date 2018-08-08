@@ -9,7 +9,7 @@ import DOMBuilder from '../utility/DOMBuilder';
 import '../../css/ArchiveLayer.css';
 import {$qs, $qsa} from '../utility';
 
-let currentRowspanKey = '';
+let currentRowspanKey = [];
 
 export default class ArchiveLayer {
     constructor() {
@@ -254,15 +254,23 @@ export default class ArchiveLayer {
 
         if (aData[i].rowspan) {
             if (aData[i].rowspanKey) {
-                currentRowspanKey = aData[i].rowspanKey;
+                currentRowspanKey.push(aData[i].rowspanKey);
             } else {
                 alert('[!] currentRowspanKey 항목이 누락되었습니다!');
             }
             archiveDataTd2.setAttribute('rowspan', aData[i].rowspan);
         } else {
-            if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey) {
+           /* if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey) {
                 parent.removeChild(archiveDataTd2);
 
+            }*/
+            if (currentRowspanKey.length > 0) {
+                for (let j = 0; j < currentRowspanKey.length; j++) {
+                    if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey[j]) {
+                        parent.removeChild(archiveDataTd2);
+
+                    }
+                }
             }
         }
 
