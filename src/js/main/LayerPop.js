@@ -7,6 +7,7 @@
 
 import DOMBuilder from '../utility/DOMBuilder';
 import '../../css/LayerPop.css';
+import {getWindowSize} from '../utility';
 
 
 export default class LayerPop {
@@ -147,10 +148,28 @@ export default class LayerPop {
             goButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 // alert('go ui page: ' + e.target.getAttribute('page'));
-                window.open(e.target.getAttribute('page'), '_blank');
+                const screenSize = getWindowSize();
+
+                if (window.jj) {
+                    window.jj.link.html(e.target.getAttribute('page'), '_blank', {maximize: true});
+                } else {
+                    window.open(e.target.getAttribute('page'), '_blank', 'top=0, left=0, width=' + screenSize.width + ', height=' + screenSize.height);
+                }
 
             }, false);
             // console.log('---data: ', value);
+
+
+            if (value.isDisable) {
+                if (value.label) {
+                    tdLabel.style.opacity = 0.2;
+                }
+
+                tdTitle.style.opacity = 0.2;
+                goButton.style.opacity = 0.2;
+                goButton.style.pointerEvents = 'none';
+
+            }
 
             for (let category in data.dataCategory) {
                 const dataCategory = DOMBuilder.createElement('td', {

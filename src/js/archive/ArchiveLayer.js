@@ -18,6 +18,7 @@ export default class ArchiveLayer {
 
     static appendArchive(params) {
         console.log('--> appendArchive: ', params);
+        currentRowspanKey = [];
 
         const layerPopContainer = DOMBuilder.createElement('div', {
             attrs: {
@@ -127,6 +128,8 @@ export default class ArchiveLayer {
         panels.forEach((value) => {
             value.style.backgroundColor = '#b9bab4';
         });
+
+        currentRowspanKey = [];
     }
 
     static initArchiveTable(target, data, archiveIndex) {
@@ -135,7 +138,7 @@ export default class ArchiveLayer {
 
         const contentTable = DOMBuilder.createElement('table', {
             attrs: {
-                class: 'archiveTable'
+                class: 'archiveLayerTable'
             },
             parent: target
         });
@@ -189,7 +192,7 @@ export default class ArchiveLayer {
 
         });
 
-        data.archiveData[archiveIndex].datas.forEach((archiveData) => {
+        data.archiveData[archiveIndex].datas.forEach((archiveData, idx) => {
             const archiveDataTr = DOMBuilder.createElement('tr', {
                 attrs: {
                     class: 'archiveDataTrStyle'
@@ -209,6 +212,10 @@ export default class ArchiveLayer {
                 ArchiveLayer.appendIcon(archiveDataTr, i + 1, data, archiveData);
             }
 
+
+            if (data.archiveData[archiveIndex].datas.length - 1 === idx) {
+                archiveDataTr.style.borderBottom = '2px solid #8d8d8b';
+            }
 
         });
 
@@ -259,11 +266,13 @@ export default class ArchiveLayer {
                 alert('[!] currentRowspanKey 항목이 누락되었습니다!');
             }
             archiveDataTd2.setAttribute('rowspan', aData[i].rowspan);
+            archiveDataTd2.style.borderBottom = '2px solid #8d8d8b';
         } else {
            /* if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey) {
                 parent.removeChild(archiveDataTd2);
 
             }*/
+           // console.log('| -> currentRowspanKey: ', currentRowspanKey);
             if (currentRowspanKey.length > 0) {
                 for (let j = 0; j < currentRowspanKey.length; j++) {
                     if (aData[i].rowspanKey && aData[i].rowspanKey === currentRowspanKey[j]) {

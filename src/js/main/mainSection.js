@@ -27,6 +27,8 @@ export function mainIndexList(target, code) {
             initIndexList(target, meta);
             initUserGuide(target.parentNode);
             initFooter($qs('#mainFooter'));
+            
+            setBrowserTitle(meta.title);
         });
 
 
@@ -249,5 +251,10 @@ function initTitle(target) {
         },
         parent: target
     });
+}
+
+function setBrowserTitle(title) {
+    const titleElement = document.head.querySelector('title');
+    if (titleElement) titleElement.innerHTML = title;
 }
 

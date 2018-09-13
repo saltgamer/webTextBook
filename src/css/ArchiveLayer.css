@@ -78,7 +78,7 @@
     overflow-y: scroll;
 }
 
-.archiveTable {
+.archiveLayerTable {
     border: 0;
     border-collapse: collapse;
     overflow: hidden;

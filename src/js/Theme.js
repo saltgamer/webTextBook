@@ -78,6 +78,25 @@ export default class Theme {
                     });
 
             case 'pra_5':
+                return Promise.all([
+                    loadPraBoyImg(this.textBookCode),
+                    loadPraGirlImg(this.textBookCode),
+                    loadPraRabbitImg(this.textBookCode),
+                    loadPraTurtleImg(this.textBookCode),
+                    loadPraDogImg(this.textBookCode)
+
+                ])
+                    .then((imgs) => {
+                        console.log('--> imgs: ', imgs);
+                        setPraBoyAni(target, imgs[0]);
+                        setPraGirlAni(target, imgs[1]);
+                        setPraRabbitAni(target, imgs[2]);
+                        setPraTurtleAni(target, imgs[3]);
+                        setPraDogAni(target, imgs[4]);
+
+
+                        Loading.hide();
+                    });
             case 'gym_5':
                 Loading.hide();
                 break;
@@ -166,6 +185,461 @@ function loadETCImg(textBookCode) {
             return img;
         });
 }
+
+function loadPraBoyImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/boy_body.png',
+        './theme/' + textBookCode + '/boy_head.png',
+        './theme/' + textBookCode + '/boy_hand.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadPraGirlImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/girl_body.png',
+        './theme/' + textBookCode + '/girl_head.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadPraRabbitImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/rabbit_body.png',
+        './theme/' + textBookCode + '/rabbit_leftArm.png',
+        './theme/' + textBookCode + '/rabbit_rightArm.png',
+        './theme/' + textBookCode + '/rabbit_effect1.png',
+        './theme/' + textBookCode + '/rabbit_effect2.png',
+        './theme/' + textBookCode + '/rabbit_effect3.png',
+        './theme/' + textBookCode + '/rabbit_effect4.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadPraTurtleImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/turtle_body.png',
+        './theme/' + textBookCode + '/turtle_leftArm.png',
+        './theme/' + textBookCode + '/turtle_rightArm.png',
+        './theme/' + textBookCode + '/turtle_effect1.png',
+        './theme/' + textBookCode + '/turtle_effect2.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function loadPraDogImg(textBookCode) {
+    return loadImages(
+        './theme/' + textBookCode + '/dog_head.png',
+        './theme/' + textBookCode + '/dog_closeEye.png',
+        './theme/' + textBookCode + '/dog_heart1.png',
+        './theme/' + textBookCode + '/dog_heart2.png'
+    )
+        .then((img) => {
+            // console.log('--> load img: ', img);
+            return img;
+        });
+}
+
+function setPraBoyAni(target, img) {
+    const praBoyBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'praBoyBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'praBoy_body';
+    img[1].className = 'praBoy_head';
+    img[2].className = 'praBoy_hand';
+
+    praBoyBox.appendChild(img[0]);
+    praBoyBox.appendChild(img[1]);
+    praBoyBox.appendChild(img[2]);
+
+    const boyHeadAni = initAniDom({
+        direction: 'normal',
+        loop: true,
+
+    });
+    boyHeadAni.add({
+        targets: img[1],
+        rotate: -15,
+        duration: 2000
+    })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2000
+        })
+        .add({
+            targets: img[1],
+            rotate: 15,
+            duration: 2000
+        })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2000
+        });
+
+}
+
+function setPraGirlAni(target, img) {
+    const praGirlBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'praGirlBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'praGirl_body';
+    img[1].className = 'praGirl_head';
+
+    praGirlBox.appendChild(img[0]);
+    praGirlBox.appendChild(img[1]);
+
+    const girlHeadAni = initAniDom({
+        direction: 'normal',
+        loop: true
+    });
+    girlHeadAni.add({
+        targets: img[1],
+        rotate: -5,
+        duration: 2500
+    })
+    /*.add({
+        targets: img[1],
+        rotate: 0,
+        duration: 1500
+    })*/
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2500
+        })
+        .add({
+            targets: img[1],
+            rotate: 10,
+            duration: 2500
+        })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2500
+        });
+
+
+}
+
+function setPraRabbitAni(target, img) {
+    const praRabbitBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'praRabbitBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'praRabbit_body';
+    img[1].className = 'praRabbit_leftArm';
+    img[2].className = 'praRabbit_rightArm';
+    img[3].className = 'praRabbit_effect1';
+    img[4].className = 'praRabbit_effect2';
+    img[5].className = 'praRabbit_effect3';
+    img[6].className = 'praRabbit_effect4';
+
+
+    praRabbitBox.appendChild(img[1]);
+    praRabbitBox.appendChild(img[2]);
+    praRabbitBox.appendChild(img[0]);
+    praRabbitBox.appendChild(img[3]);
+    praRabbitBox.appendChild(img[4]);
+    praRabbitBox.appendChild(img[5]);
+    praRabbitBox.appendChild(img[6]);
+
+
+    const rightArmAni = initAniDom({
+        direction: 'normal',
+        // easing: 'linear',
+        loop: true
+    });
+    rightArmAni.add({
+        targets: img[2],
+        rotate: -7,
+        duration: 2500
+    })
+        .add({
+            targets: img[2],
+            rotate: 0,
+            duration: 2500
+        });
+
+    const leftArmAni = initAniDom({
+        direction: 'normal',
+        // easing: 'linear',
+        loop: true
+    });
+    leftArmAni.add({
+        targets: img[1],
+        rotate: 7,
+        duration: 2500
+    })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2500
+        });
+
+    const effect1Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect1Ani.add({
+        targets: img[3],
+        translateX: 2,
+        translateY: -4,
+        duration: 350
+    })
+        .add({
+            targets: img[3],
+            translateX: 0,
+            translateY: 0,
+            duration: 850
+        });
+
+    const effect2Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect2Ani.add({
+        targets: img[4],
+        translateX: 1,
+        translateY: -3,
+        duration: 350
+    })
+        .add({
+            targets: img[4],
+            translateX: 0,
+            translateY: 0,
+            duration: 850
+        });
+
+    const effect3Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect3Ani.add({
+        targets: img[5],
+        translateX: 4,
+        translateY: 1,
+        duration: 350
+    })
+        .add({
+            targets: img[5],
+            translateX: 0,
+            translateY: 0,
+            duration: 850
+        });
+
+    const effect4Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect4Ani.add({
+        targets: img[6],
+        translateX: -4,
+        translateY: 1,
+        duration: 350
+    })
+        .add({
+            targets: img[6],
+            translateX: 0,
+            translateY: 0,
+            duration: 850
+        });
+}
+
+function setPraTurtleAni(target, img) {
+    const praTurtleBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'praTurtleBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'praTurtle_body';
+    img[1].className = 'praTurtle_leftArm';
+    img[2].className = 'praTurtle_rightArm';
+    img[3].className = 'praTurtle_effect1';
+    img[4].className = 'praTurtle_effect2';
+
+    praTurtleBox.appendChild(img[0]);
+    praTurtleBox.appendChild(img[1]);
+    praTurtleBox.appendChild(img[2]);
+
+    praTurtleBox.appendChild(img[3]);
+    praTurtleBox.appendChild(img[4]);
+
+
+    const rightArmAni = initAniDom({
+        direction: 'normal',
+        // easing: 'linear',
+        loop: true
+    });
+    rightArmAni.add({
+        targets: img[2],
+        rotate: -9,
+        duration: 2400
+    })
+        .add({
+            targets: img[2],
+            rotate: 0,
+            duration: 2400
+        });
+
+    const leftArmAni = initAniDom({
+        direction: 'normal',
+        // easing: 'linear',
+        loop: true
+    });
+    leftArmAni.add({
+        targets: img[1],
+        rotate: 9,
+        duration: 2400
+    })
+        .add({
+            targets: img[1],
+            rotate: 0,
+            duration: 2400
+        });
+
+    const effect1Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect1Ani.add({
+        targets: img[3],
+        translateX: -2,
+        translateY: 4,
+        duration: 300
+    })
+        .add({
+            targets: img[3],
+            translateX: 0,
+            translateY: 0,
+            duration: 800
+        });
+
+    const effect2Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect2Ani.add({
+        targets: img[4],
+        translateX: -2,
+        translateY: -3,
+        duration: 300
+    })
+        .add({
+            targets: img[4],
+            translateX: 0,
+            translateY: 0,
+            duration: 800
+        });
+
+
+}
+
+function setPraDogAni(target, img) {
+    const praDogBox = DOMBuilder.createElement('div', {
+        attrs: {
+            class: 'praDogBox'
+        },
+        parent: target
+    });
+
+    img[0].className = 'praDog_head';
+    img[1].className = 'praDog_closeEye';
+    img[2].className = 'praDog_heart1';
+    img[3].className = 'praDog_heart2';
+
+    praDogBox.appendChild(img[0]);
+    praDogBox.appendChild(img[1]);
+    praDogBox.appendChild(img[2]);
+    praDogBox.appendChild(img[3]);
+
+    const eyeAni = initAniDom({
+        direction: 'normal',
+        // easing: 'linear',
+        loop: true
+    });
+    eyeAni.add({
+        targets: img[1],
+        opacity: 0,
+        duration: 500
+    })
+        .add({
+            targets: img[1],
+            opacity: 1,
+            duration: 500
+        });
+
+
+    const effect1Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect1Ani.add({
+        targets: img[2],
+        translateX: -2,
+        translateY: 4,
+        duration: 300
+    })
+        .add({
+            targets: img[2],
+            translateX: 0,
+            translateY: 0,
+            duration: 800
+        });
+
+    const effect2Ani = initAniDom({
+        direction: 'normal',
+        easing: 'linear',
+        loop: true
+    });
+    effect2Ani.add({
+        targets: img[3],
+        translateX: -2,
+        translateY: -3,
+        duration: 300
+    })
+        .add({
+            targets: img[3],
+            translateX: 0,
+            translateY: 0,
+            duration: 800
+        });
+
+}
+
 
 function setArtGirlAni(target, img) {
     const artGirlBox = DOMBuilder.createElement('div', {
